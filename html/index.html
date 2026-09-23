@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undertale: A Escolha é Sua</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <h1>UNDERTALE: A Escolha é Sua</h1>
+    <h2>A Rota Pacifísta: Poupar</h2>
+
+    <img src="./img/Frisk.png" alt="Frisk: Garota inocente de olhos fechados" onclick="alternarRota()">
+
+    <p>* Ver que todos saíram a salvo... te enche de Determinação. Use a empatia e a bondade para guiar Frisk e dar um final feliz a todos os monstros do Subsolo.</p>
+
+    <a href="https://youtu.be/mk4y2x3_e04?si=GCiDwnUvBOIgkidb" target="_blank">[ Poupar ]</a>
+
+    <footer>
+        <p>* Links Úteis do Subsolo.</p>
+        <ul>
+            <li><a href="https://undertale.com" target="_blank" rel="noopener noreferrer">Site Oficial de Undertale</a></li>
+            <li><a href="https://undertale.fandom.com/pt-br/wiki/P%C3%A1gina_principal" target="_blank">Wiki do Jogo</a></li>
+        </ul>
+    </footer>
+
+    <script>
+        let rotaPacifista = true;
+
+        const imgFrisk = "./img/Frisk.png";
+        const imgChara = "./img/Chara.png";
+
+        function alternarRota() {
+            const corpo = document.body;
+
+            const subtitulo = document.querySelector('h2');
+            const imagem = document.querySelector('img');
+            const descricao = document.querySelector('p');
+            const botao = document.querySelector('a');
+
+            if (rotaPacifista) {
+
+                corpo.classList.add('tema-genocida');
+                imagem.src = "./img/Chara.png";
+                imagem.alt = "Chara";
+
+                subtitulo.textContent = "A Rota Genocida: Atacar";
+                descricao.textContent = "* Desde quando você estava no controle? Um caminho de silêncio e poeira. Ao escolher a destruição total, você aceita as consequências.";
+
+                botao.textContent = "[ Apagar ]";
+                botao.href = "https://youtu.be/Pb9UDudyE4o?si=rB_Y0vgdVwnZCxdU";
+
+                rotaPacifista = false;
+            } else {
+                corpo.classList.remove('tema-genocida');
+                imagem.src = "./img/Frisk.png";
+                imagem.alt = "Frisk";
+
+                subtitulo.textContent = "A Rota Pacifista: Poupar";
+                descricao.textContent = "* Ver que todos saíram a salvo... te enche de determinação. Use a empatia e a bondade para guiar Frisk e dar um final feliz a todos os monstros.";
+
+                botao.textContent = "[ Poupar ]";
+                botao.href = "https://youtu.be/mk4y2x3_e04?si=lUv7pnSPcmXJTp34";
+
+                rotaPacifista = true;
+            }
+        }
+    </script>
+</body>
+</html>
