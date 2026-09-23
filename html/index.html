@@ -15,13 +15,13 @@
 
     <p>* Ver que todos saíram a salvo... te enche de Determinação. Use a empatia e a bondade para guiar Frisk e dar um final feliz a todos os monstros do Subsolo.</p>
 
-    <a href="https://youtu.be/mk4y2x3_e04?si=GCiDwnUvBOIgkidb" target="_blank">[ Poupar ]</a>
+    <a href="https://youtu.be/mk4y2x3_e04?si=GCiDwnUvBOIgkidb" target="_blank" rel="noopener noreferrer">[ Poupar ]</a>
 
     <footer>
         <p>* Links Úteis do Subsolo.</p>
         <ul>
             <li><a href="https://undertale.com" target="_blank" rel="noopener noreferrer">Site Oficial de Undertale</a></li>
-            <li><a href="https://undertale.fandom.com/pt-br/wiki/P%C3%A1gina_principal" target="_blank">Wiki do Jogo</a></li>
+            <li><a href="https://undertale.fandom.com/pt-br/wiki/P%C3%A1gina_principal" target="_blank" rel="noopener noreferrer">Wiki do Jogo</a></li>
         </ul>
     </footer>
 
@@ -40,7 +40,8 @@
             const botao = document.querySelector('a');
 
             if (rotaPacifista) {
-
+                link.href = "https://youtu.be/M3N43A0y96I?si=F_CGRK1SMM3T3kZP";
+                link.target = "_blank";
                 corpo.classList.add('tema-genocida');
                 imagem.src = "./img/Chara.png";
                 imagem.alt = "Chara";
@@ -50,6 +51,8 @@
 
                 botao.textContent = "[ Apagar ]";
                 botao.href = "https://youtu.be/Pb9UDudyE4o?si=rB_Y0vgdVwnZCxdU";
+                link.href = "https://youtu.be/mX3LgS_K0rE?si=S1v1N20H1I8P8P3R";
+                link.target = "_blank";
 
                 rotaPacifista = false;
             } else {
